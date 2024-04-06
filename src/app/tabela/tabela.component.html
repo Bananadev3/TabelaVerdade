@@ -4,12 +4,12 @@
   </div>
   <div class="insert mb-4 text-start">
     <div class="m-4">
-      <h4>Digite o valor p:</h4>
-      <input [(ngModel)]="p" type="text" placeholder="Valor-p" />
+      <h4>Digite o primeiro Valor:</h4>
+      <input [(ngModel)]="a" type="text" placeholder="Valor-p" />
     </div>
     <div class="m-4">
-      <h4>Digite o valor q:</h4>
-      <input [(ngModel)]="q" type="text" placeholder="Valor-q" />
+      <h4>Digite o segundo Valor:</h4>
+      <input [(ngModel)]="b" type="text" placeholder="Valor-q" />
     </div>
   </div>
   <div class="text-center m-4">
@@ -36,31 +36,31 @@
     <table class="table table-secondary table-bordered text-center fs-4">
       <thead>
         <tr>
-          <th scope="col">{{ p }}</th>
-          <th scope="col">{{ q }}</th>
-          <th scope="col">{{ p }}^{{ q }}</th>
+          <th scope="col">p</th>
+          <th scope="col">q</th>
+          <th scope="col">p^q</th>
         </tr>
       </thead>
       <tbody>
         <tr class="table-warning">
-          <th>V</th>
-          <th>V</th>
-          <th>V</th>
-        </tr>
-        <tr>
-          <th>V</th>
-          <th>F</th>
-          <th>F</th>
+          <th>{{ a }}</th>
+          <th>{{ a }}</th>
+          <th>{{ r1 }}</th>
         </tr>
         <tr class="table-warning">
-          <th>F</th>
-          <th>V</th>
-          <th>F</th>
+          <th>{{ a }}</th>
+          <th>{{ b }}</th>
+          <th>{{ r2 }}</th>
         </tr>
-        <tr>
-          <th>F</th>
-          <th>F</th>
-          <th>F</th>
+        <tr class="table-warning">
+          <th>{{ b }}</th>
+          <th>{{ a }}</th>
+          <th>{{ r3 }}</th>
+        </tr>
+        <tr class="table-warning">
+          <th>{{ b }}</th>
+          <th>{{ b }}</th>
+          <th>{{ r4 }}</th>
         </tr>
       </tbody>
     </table>
