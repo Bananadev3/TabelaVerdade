@@ -1,0 +1,68 @@
+<div class="container mt-5 p-5 bg-dark rounded-4 text-light">
+  <div class="m-4 text-center" style="font-size: 3.3rem">
+    Crie sua Tabela Verdade Conjunção:
+  </div>
+  <div class="insert mb-4 text-start">
+    <div class="m-4">
+      <h4>Digite o valor p:</h4>
+      <input [(ngModel)]="p" type="text" placeholder="Valor-p" />
+    </div>
+    <div class="m-4">
+      <h4>Digite o valor q:</h4>
+      <input [(ngModel)]="q" type="text" placeholder="Valor-q" />
+    </div>
+  </div>
+  <div class="text-center m-4">
+    <button class="btn btn-lg btn-outline-primary" (click)="open(content)">
+      Criar
+    </button>
+  </div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title fw-bolder" id="modal-basic-title">
+      Tabela Verdade Conjunção:
+    </h4>
+    <button
+      type="button"
+      style="width: 30px"
+      class="btn-close"
+      aria-label="Close"
+      (click)="d('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <table class="table table-secondary table-bordered text-center fs-4">
+      <thead>
+        <tr>
+          <th scope="col">{{ p }}</th>
+          <th scope="col">{{ q }}</th>
+          <th scope="col">{{ p }}^{{ q }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-warning">
+          <th>V</th>
+          <th>V</th>
+          <th>V</th>
+        </tr>
+        <tr>
+          <th>V</th>
+          <th>F</th>
+          <th>F</th>
+        </tr>
+        <tr class="table-warning">
+          <th>F</th>
+          <th>V</th>
+          <th>F</th>
+        </tr>
+        <tr>
+          <th>F</th>
+          <th>F</th>
+          <th>F</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-template>
